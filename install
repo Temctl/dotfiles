@@ -1,0 +1,15 @@
+#!/bin/bash
+echo 'running mkdir'
+pushd ~/.config
+mkdir i3 alacritty compton
+popd
+
+# Link configs
+echo 'symlinking configs'
+ln -s ./i3/config ~/.config/i3/config
+ln -s ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ./compton/compton.conf ~/.config/compton.conf
+
+ln -s ./zsh/zshrc ~/.zshrc
+
+echo 'done\!'

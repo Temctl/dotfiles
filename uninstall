@@ -1,0 +1,16 @@
+#!/bin/bash
+pushd ~/.config
+
+echo 'removing configs'
+
+# rm configs
+rm ~/.config/i3/config
+rm ~/.config/alacritty/alacritty.yml
+rm ~/.config/compton.conf
+rm ~/.zshrc
+
+echo 'running rmdir'
+rmdir i3 alacritty compton
+popd
+
+echo 'done\!'
